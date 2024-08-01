@@ -1,0 +1,28 @@
+doctype html
+html
+     head 
+         title= `${title}`
+         meta(name="viewport" content="width=device-width, initial-scale=1")
+         link(rel="stylesheet", href="/css/style.css")
+     body    
+         h1 Enter Data
+         
+         form(action="/update-cobj", method="post")  
+            div
+                label(for="name") Name:
+                input(type="text", id="name", name="name", required=true)
+                br
+            div
+                label(for="name") Color of Shirt:
+                input(type="text", id="color", name="color", required=true)
+                br
+            div
+                label(for="name") Nickname:
+                input(type="text", id="nickname", name="nickname", required=true)
+                br
+      
+            button(type="submit") Submit
+
+
+         br
+         a(href="/") Return to the homepage

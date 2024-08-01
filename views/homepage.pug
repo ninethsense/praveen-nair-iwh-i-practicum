@@ -1,0 +1,26 @@
+//- ** This is a sample of a pug template and how it uses the data passed to it from index.js.
+
+doctype html
+html 
+     head 
+         title= `${title}`
+         meta(name="viewport" content="width=device-width, initial-scale=1")
+         link(rel="stylesheet", href="/css/style.css")
+     body    
+         h1 Contacts
+         a(href="/update-cobj") Add to this table
+         table(border="1")
+            thead
+                tr  
+                    th Fullname
+                    th Email
+                    th Name
+                    th Color of Shirt 
+                    th Nick Name
+                each contact in data
+                    tr
+                     td= contact.properties.firstname + ' ' + contact.properties.lastname
+                     td= contact.properties.email
+                     td= contact.properties.new_name
+                     td= contact.properties.color_of_shirt
+                     td= contact.properties.nickname
